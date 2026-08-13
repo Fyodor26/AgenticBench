@@ -27,7 +27,7 @@ class GeminiAgent:
     async def execute(
         self,
         prompt: str,
-        model: str = "gemini-2.5-flash",
+        model: str = "gemini-3.5-flash",
         api_key: Optional[str] = None,
         timeout: int = 60,
         **kwargs,
@@ -49,6 +49,7 @@ class GeminiAgent:
 
         try:
             client = genai.Client(api_key=api_key)
+            print(api_key)
 
             response = await asyncio.wait_for(
                 asyncio.to_thread(

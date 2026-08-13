@@ -97,7 +97,7 @@ class AgentExecutor:
         elif provider_enum == AgentProvider.GEMINI:
             return await executor.execute(
                 prompt=prompt,
-                model=model or "gemini-2.5-flash",
+                model=model or "gemini-3.5-flash",
                 api_key=api_key,
                 timeout=timeout,
                 **kwargs,
